@@ -30,3 +30,42 @@ pip install -r requirements.txt
 
 # Run optimisation script
 python collateral_optimisation.py
+```
+
+
+---
+
+
+
+# Energy Price Risk & VaR Simulation
+
+##  Overview
+This project analyses daily energy price risk using **Value-at-Risk (VaR)** and **Expected Shortfall (CVaR)**.  
+Monte Carlo simulation and bootstrapping techniques are applied to model portfolio risk under stressed conditions.
+
+##  Methodology
+- Collected synthetic daily price series for an energy portfolio.
+- Computed **log returns** and distribution statistics.
+- Applied **Monte Carlo Simulation** with 10,000+ trials to estimate portfolio VaR and CVaR.
+- Bootstrapping approach for empirical VaR confidence intervals.
+- Compared parametric, historical, and simulation-based risk measures.
+
+##  Results
+- Simulation-based VaR captured fat-tailed risk better than Gaussian parametric VaR.
+- Bootstrapped confidence intervals validated stability of risk estimates.
+- Visualised return distributions, simulated losses, and tail behaviour.
+
+##  Tech Stack
+- Python (`numpy`, `pandas`, `matplotlib`, `seaborn`)
+- Risk analytics (`scipy.stats`)
+- Simulation (`numpy.random`)
+
+##  How to Run
+```bash
+
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run VaR simulation
+python var_simulation.py
