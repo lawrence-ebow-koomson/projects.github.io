@@ -1,10 +1,32 @@
-# Analyst
+# Collateral Optimisation for Energy Trading
 
-Analytical finance professional with a strong background in quantitative finance, risk management, and data-driven analysis. I hold CMSA® designation and Risk Management Specialization certificate from Corporate Finance Institute.
+##  Overview
+This project develops an optimisation framework to minimise collateral costs in energy trading while ensuring exposure coverage.  
+The goal is to allocate different asset classes (cash, corporate bonds) efficiently across multiple counterparties, improving liquidity usage.
 
-### Education
-MSc. Finance and Investment | Berlin School of Business and Innovation (Feb 2024 - Aug 2025)\
+##  Methodology
+- **Formulated as a Linear Programming (LP) problem** using `cvxpy`.
+- Objective: minimise expected uncovered loss (EUL) subject to collateral and exposure constraints.
+- Compared different allocation strategies:
+  - **Pre-optimisation (baseline)**
+  - **Greedy allocation**
+  - **Convex optimisation with CVX**
+- Evaluated results via allocation tables, expected uncovered loss, and visualisations.
 
-BSc. Actuarial Science | Kwame Nkrumah University of Science and Technology, Ghana (Sept 2015 - Jun 2019)
+##  Results
+- Optimised allocation reduced **uncovered exposure** significantly across counterparties.
+- Demonstrated efficient trade-offs between cash and corporate bond collateral.
+- Produced comparative plots: baseline vs greedy vs CVX allocations.
 
-### 
+## 🛠 Tech Stack
+- Python (`cvxpy`, `numpy`, `pandas`, `matplotlib`, `seaborn`)
+- Linear programming solver (`SCS`)
+
+##  How to Run
+```bash
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run optimisation script
+python collateral_optimisation.py
